@@ -1,0 +1,13 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "~2",
+	"bootstrap": "~3"
+  },
+  "exportsOverride": {
+      "jquery": {
+        "": "dist/jquery.min.js"
+      }
+  }
+}
