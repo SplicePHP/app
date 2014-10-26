@@ -166,12 +166,18 @@ Request::addDetector('tablet', function ($request) {
  *
  */
 
+Plugin::load('Asset', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('DebugKit', ['bootstrap' => true]);
+Plugin::load('System', ['bootstrap' => true, 'routes' => true]);
+Plugin::load('AdminLte', ['bootstrap' => true, 'routes' => false]);
+Plugin::load('Migrations');
 
 /**
  * Connect middleware/dispatcher filters.
  */
 
-DispatcherFactory::add('Asset');
+DispatcherFactory::add('Asset.Asset');
 DispatcherFactory::add('Routing');
 DispatcherFactory::add('ControllerFactory');
+
+reg::register('db', 'system/db');
