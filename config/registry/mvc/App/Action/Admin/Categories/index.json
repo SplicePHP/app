@@ -1,0 +1,20 @@
+{
+    "contain": [
+        "Images",
+        "ParentCategories"
+    ],
+    "config": {
+        "Images": {
+            "config": {
+                "display": "edit"
+            }
+        },
+        "field": {
+            "info": {
+                "options": {
+                    "type": "wysiwyg"
+                }
+            }
+        }
+    }
+}

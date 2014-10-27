@@ -1,0 +1,103 @@
+{
+    "theme": "AdminLte",
+    "form": {
+        "paginator": {
+            "ajax": true,
+            "templates": {
+                "ajax": "AdminLte.pagination-ajax.php"
+            }
+        }
+    },
+    "crypt": {
+        "key": "as9u0qasd9q87agf703u4u"
+    },
+    "helpers": {
+        "System.Form": {
+            "templates": "AdminLte.forms-template.php",
+            "widgets": {
+                "wysiwyg": [
+                    "System\\View\\Widget\\Wysiwyg"
+                ],
+                "_default": [
+                    "System\\View\\Widget\\Basic"
+                ],
+                "textarea": [
+                    "System\\View\\Widget\\Textarea"
+                ],
+                "jsonencode": [
+                    "System\\View\\Widget\\Jsonencode"
+                ],
+                "jsCallbackField": [
+                    "System\\View\\Widget\\JsCallbackField"
+                ],
+                "button": [
+                    "System\\View\\Widget\\Button"
+                ],
+                "datetime": [
+                    "System\\View\\Widget\\DateTime"
+                ],
+                "add": [
+                    "System\\View\\Widget\\Add"
+                ],
+                "entity": [
+                    "System\\View\\Widget\\Entity"
+                ],
+                "edit": [
+                    "System\\View\\Widget\\Edit"
+                ],
+                "select": [
+                    "System\\View\\Widget\\SelectBox"
+                ],
+                "img": [
+                    "System\\View\\Widget\\Img"
+                ],
+                "tree": [
+                    "System\\View\\Widget\\Tree"
+                ],
+                "checkbox": [
+                    "System\\View\\Widget\\Checkbox"
+                ],
+                "hasMany": [
+                    "System\\View\\Widget\\HasMany"
+                ]
+            }
+        },
+        "Html": null,
+        "Time": null,
+        "Paginator": null,
+        "System.System": null,
+        "System.Acl": null
+    },
+    "components": {
+        "Session": null,
+        "Flash": null,
+        "RequestHandler": null,
+        "Paginator": {
+            "limit": 25
+        },
+        "System.System": null,
+        "Auth": {
+            "loginRedirect": {
+                "controller": "dashboard",
+                "action": "index",
+                "plugin": "System",
+                "prefix": "admin"
+            },
+            "logoutRedirect": {
+                "controller": "users",
+                "action": "login",
+                "prefix": "admin",
+                "plugin": "System"
+            },
+            "authError": "You are unothorized to perform this action.",
+            "authorize": "Controller",
+            "loginAction": {
+                "plugin": "System",
+                "controller": "users",
+                "action": "login"
+            }
+        },
+        "System.Acl": null,
+        "Cookie": null
+    }
+}

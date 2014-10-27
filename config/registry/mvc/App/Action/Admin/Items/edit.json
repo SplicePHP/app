@@ -1,0 +1,20 @@
+{
+    "config": {
+        "Params": {
+            "config": {
+                "display": "edit"
+            }
+        },
+        "field": {
+            "image": {
+                "options": {
+                    "type": "img"
+                }
+            }
+        }
+    },
+    "contain": [
+        "Params",
+        "Categories"
+    ]
+}

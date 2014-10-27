@@ -1,0 +1,116 @@
+{
+    "contain": [
+        "Donors",
+        "Objectives",
+        "WorkplanOutcomes",
+        "WorkplanOutputs",
+        "Partners",
+        "WorkplanOutputs.Activities",
+        "WorkplanOutputs.Risks",
+        "Objectives.Impacts",
+        "WorkplanOutcomes.OutcomeIndicators",
+        "WorkplanOutcomes.Outcomes",
+        "WorkplanOutputs.Outputs",
+        "Objectives.ObjectiveStatements",
+        "WorkplanOutputs.OutputIndicators",
+        "WorkplanOutputs.Activities.ParentActivities",
+        "WorkplanOutputs.Activities.SubActivities",
+        "WorkplanOutputs.Activities.SubActivities.Dates",
+        "WorkplanOutputs.Activities.ActivityTypes",
+        "WorkplanOutputs.Activities.Inputs",
+        "WorkplanOutputs.Activities.MeansOfVerifications",
+        "WorkplanOutputs.Activities.SubActivities.MeansOfVerifications",
+        "WorkplanOutputs.Responsibilities"
+    ],
+    "config": {
+        "Partners": {
+            "config": {
+                "display": "edit"
+            }
+        },
+        "Objectives": {
+            "config": {
+                "display": "edit"
+            },
+            "Impacts": {
+                "config": {
+                    "display": "select+"
+                },
+                "Indicators": {
+                    "config": {
+                        "display": "edit"
+                    }
+                }
+            },
+            "ObjectiveStatements": {
+                "config": {
+                    "display": "edit"
+                }
+            }
+        },
+        "WorkplanOutcomes": {
+            "config": {
+                "display": "edit",
+                "field": {
+                    "outcome": {
+                        "options": {
+                            "type": "tree"
+                        }
+                    }
+                }
+            }
+        },
+        "WorkplanOutputs": {
+            "Risks": {
+                "config": {
+                    "display": "edit"
+                }
+            },
+            "Activities": {
+                "config": {
+                    "display": "edit"
+                },
+                "Dates": {
+                    "config": {
+                        "display": "edit"
+                    }
+                },
+                "ActivityInputs": {
+                    "config": {
+                        "display": "edit"
+                    }
+                },
+                "SubActivities": {
+                    "config": {
+                        "display": "edit"
+                    },
+                    "Dates": {
+                        "config": {
+                            "display": "edit"
+                        }
+                    }
+                }
+            },
+            "config": {
+                "display": "edit"
+            },
+            "Responsibilities": {
+                "config": {
+                    "display": "select+"
+                }
+            }
+        },
+        "field": {
+            "donor_id": {
+                "options": {
+                    "type": "tree"
+                }
+            },
+            "objectives": {
+                "options": {
+                    "type": "tree"
+                }
+            }
+        }
+    }
+}
