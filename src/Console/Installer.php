@@ -97,6 +97,7 @@ class Installer {
 		$walker($dir . '/tmp', $worldWritable, $io);
 		$changePerms($dir . '/tmp', $worldWritable, $io);
 		$changePerms($dir . '/logs', $worldWritable, $io);
+		$changePerms($dir, $worldWritable, $io);
 	}
 
 /**
