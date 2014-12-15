@@ -1,5 +1,5 @@
 var lib = 'webroot/lib/';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                     update: true,
                     verbose: true,
                     cleanTargetDir: false,
-                    cleanBowerDir: false,
+                    cleanBowerDir: true,
                     bowerOptions: {}
                 }
             }
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                 composerLocation: 'composer.phar'
             }
         },
-		shell: {
+        shell: {
             composer: {
                 options: {stdout: true, stderr: true},
                 command: [
@@ -48,43 +48,53 @@ module.exports = function(grunt) {
             compile: {
                 options: {stdout: true, stderr: true},
                 command: [
-                    'src/Console/cake build --all true --prefix admin -f 1'
+                    'bin/cake System.build --all true --prefix admin -f 1'
                 ].join('&&')
             },
             "update-all": {
-              options: {stdout: true, stderr: true},
-              command: [
-                'src/Console/cake automation update'
-              ].join('&&')
+                options: {stdout: true, stderr: true},
+                command: [
+                    'bin/cake System.automation update'
+                ].join('&&')
+            },
+            "update-symlinks": {
+                options: {stdout: true, stderr: true},
+                command: [
+                    'bin/cake System.automation update -s 1'
+                ].join('&&')
             }
-		},
-		hub: {
-		    all: {
-		      src: ['plugins/*/Gruntfile.js'],
-		      tasks: ['update']
-		    },
+        },
+        hub: {
+            all: {
+                src: ['plugins/*/Gruntfile.js'],
+                tasks: ['update']
+            },
             watch: {
                 src: ['plugins/*/Gruntfile.js'],
                 tasks: ['watch']
             }
-		},
-		watch: {
+        },
+        watch: {
             scripts: {
-              files: ['config/compile.txt'],
-              tasks: ['shell:compile'],
-              options: {
-                spawn: false
-              }
+                files: ['config/compile.json'],
+                tasks: ['shell:compile'],
+                options: {
+                    spawn: false
+                }
             }
-		}
+        }
     });
 
-	grunt.registerTask('watch-all', [
-		'hub:watch',
-		'watch'
-	]);
+    grunt.registerTask('watch-all', [
+        'hub:watch',
+        'watch'
+    ]);
 
-  grunt.registerTask('update', [
-    'shell:update-all'
-  ]);
+    grunt.registerTask('update', [
+        'shell:update-all'
+    ]);
+    
+    grunt.registerTask('symlinks', [
+        'shell:update-symlinks'
+    ]);
 };
