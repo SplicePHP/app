@@ -16,7 +16,7 @@
         "splicephp/asset": "dev-master",
         "cakephp/migrations": "dev-master",
         "splicephp/gizmo": "dev-master",
-        "splicephp/elfinder": "dev-master",
+        "studio-42/elfinder": "2.x",
         "sabberworm/php-css-parser": "*"
     },
     "minimum-stability": "dev",
@@ -45,11 +45,6 @@
             "name": "splicephp/plugin-default_theme",
             "type": "vcs",
             "url": "git@bitbucket.org:splicephp/plugin-default_theme.git"
-        },
-        {
-            "name": "splicephp/elfinder",
-            "type": "vcs",
-            "url": "git@bitbucket.org:splicephp/elfinder.git"
         }
     ],
     "require-dev": {
