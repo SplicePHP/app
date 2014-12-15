@@ -47,6 +47,7 @@ use Cake\Network\Request;
 use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+use Splice\Core\Registry as reg;
 
 /**
  * Read configuration file and inject configuration into various
@@ -166,10 +167,19 @@ Request::addDetector('tablet', function ($request) {
  *
  */
 
+$devmode = reg::get('system/config:mode') == 'dev';
+
+if($devmode){
+    Cache::clear(false);
+}
+
 Plugin::load('Asset', ['bootstrap' => true, 'routes' => true]);
-Plugin::load('DebugKit', ['bootstrap' => true]);
+if($devmode){
+//    Plugin::load('DebugKit', ['bootstrap' => true]);
+}
 Plugin::load('System', ['bootstrap' => true, 'routes' => true]);
-Plugin::load('AdminLte', ['bootstrap' => true, 'routes' => false]);
+//Plugin::load('AdminLte', ['bootstrap' => true, 'routes' => false]);
+Plugin::load('AdminTheme', ['bootstrap' => true, 'routes' => false]);
 Plugin::load('Migrations');
 
 /**
@@ -177,6 +187,7 @@ Plugin::load('Migrations');
  */
 
 DispatcherFactory::add('Asset.Asset');
+//DispatcherFactory::add('Asset');
 DispatcherFactory::add('Routing');
 DispatcherFactory::add('ControllerFactory');
 

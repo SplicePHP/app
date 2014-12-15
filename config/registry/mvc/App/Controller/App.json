@@ -1,10 +1,10 @@
 {
-    "theme": "AdminLte",
+    "theme": "AdminTheme",
     "form": {
         "paginator": {
             "ajax": true,
             "templates": {
-                "ajax": "AdminLte.pagination-ajax.php"
+                "ajax": "AdminTheme.pagination-ajax.php"
             }
         }
     },
@@ -13,7 +13,7 @@
     },
     "helpers": {
         "System.Form": {
-            "templates": "AdminLte.forms-template.php",
+            "templates": "AdminTheme.forms-template.php",
             "widgets": {
                 "wysiwyg": [
                     "System\\View\\Widget\\Wysiwyg"
@@ -69,7 +69,6 @@
         "System.Acl": null
     },
     "components": {
-        "Session": null,
         "Flash": null,
         "RequestHandler": null,
         "Paginator": {
@@ -99,5 +98,37 @@
         },
         "System.Acl": null,
         "Cookie": null
+    },
+    "requirejs": {
+        "jquery": {
+            "path": "lib\/jquery\/jquery.min",
+            "shim": {
+                "exports": ["$","jQuery"]
+            }
+        },
+        "jquery-validation": {
+            "path": "lib\/jquery-validation\/jquery.validate",
+            "shim": {
+                "deps": [
+                    "jquery"
+                ]
+            }
+        },
+        "validate": {
+            "path": "js\/validation-additional-methods.min",
+            "shim": {
+                "deps": [
+                    "jquery-validation"
+                ]
+            }
+        },
+        "validator": {
+            "path": "lib\/form-validator\/jquery.form-validator.min",
+            "shim": {
+                "deps": [
+                    "jquery"
+                ]
+            }
+        }
     }
 }

@@ -13,9 +13,12 @@
         "splicephp/splice": "dev-master",
         "splicephp/system": "dev-master",
         "splicephp/admin_lte": "dev-master",
+        "splicephp/admin_theme": "dev-master",
         "splicephp/asset": "dev-master",
         "cakephp/migrations": "dev-master",
-        "splicephp/gizmo": "dev-master"
+        "splicephp/gizmo": "dev-master",
+        "splicephp/elfinder": "dev-master",
+        "sabberworm/php-css-parser": "*"
     },
     "minimum-stability": "dev",
     "repositories": [
@@ -35,6 +38,11 @@
             "url": "git@bitbucket.org:splicephp/plugin-admin_lte.git"
         },
         {
+            "name": "splicephp/admin_theme",
+            "type": "vcs",
+            "url": "git@bitbucket.org:splicephp/admintheme.git"
+        },
+        {
             "name": "splicephp/asset",
             "type": "vcs",
             "url": "git@bitbucket.org:splicephp/plugin-asset.git"
@@ -43,6 +51,11 @@
             "name": "splicephp/plugin-default_theme",
             "type": "vcs",
             "url": "git@bitbucket.org:splicephp/plugin-default_theme.git"
+        },
+        {
+            "name": "splicephp/elfinder",
+            "type": "vcs",
+            "url": "git@bitbucket.org:splicephp/elfinder.git"
         }
     ],
     "require-dev": {
@@ -67,7 +80,12 @@
         "post-install-cmd": [
             "App\\Console\\Installer::postInstall",
             "bin/cake System.automation update --install true"
+        ],
+        "post-update-cmd": [
         ]
+    },
+    "config": {
+        "bin-dir": "./bin"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
