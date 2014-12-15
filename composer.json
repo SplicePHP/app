@@ -12,7 +12,6 @@
         "cakephp/debug_kit": "3.0.*-dev",
         "splicephp/splice": "dev-master",
         "splicephp/system": "dev-master",
-        "splicephp/admin_lte": "dev-master",
         "splicephp/admin_theme": "dev-master",
         "splicephp/asset": "dev-master",
         "cakephp/migrations": "dev-master",
@@ -31,11 +30,6 @@
             "name": "splicephp/system",
             "type": "vcs",
             "url": "git@bitbucket.org:splicephp/plugin-system.git"
-        },
-        {
-            "name": "splicephp/admin_lte",
-            "type": "vcs",
-            "url": "git@bitbucket.org:splicephp/plugin-admin_lte.git"
         },
         {
             "name": "splicephp/admin_theme",
