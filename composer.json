@@ -85,7 +85,8 @@
         ]
     },
     "config": {
-        "bin-dir": "./bin"
+        "bin-dir": "./bin",
+        "process-timeout": 30000
     },
     "minimum-stability": "dev",
     "prefer-stable": true
