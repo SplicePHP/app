@@ -9,7 +9,6 @@
         "phpunit/phpunit": "*",
         "cakephp/cakephp": "3.0.*-dev",
         "mobiledetect/mobiledetectlib": "2.*",
-        "cakephp/debug_kit": "3.0.*-dev",
         "splicephp/splice": "dev-master",
         "splicephp/system": "dev-master",
         "splicephp/admin_theme": "dev-master",
@@ -48,7 +47,9 @@
         }
     ],
     "require-dev": {
-        "d11wtq/boris": "1.0.*"
+        "d11wtq/boris": "1.0.*",
+		"cakephp/debug_kit": "3.0.*-dev",
+		"cakephp/bake": "dev-master"
     },
     "suggest": {
         "phpunit/phpunit": "Allows automated tests to be run without system-wide install.",

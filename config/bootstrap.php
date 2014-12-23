@@ -167,18 +167,18 @@ Request::addDetector('tablet', function ($request) {
  *
  */
 
-$devmode = reg::get('system/config:mode') == 'dev';
+// Only try to load DebugKit in development mode
+// Debug Kit should not be installed on a production system
+if (Configure::read('debug')) {
+	Plugin::load('DebugKit', ['bootstrap' => true]);
+}
 
-if($devmode){
+if(Configure::read('debug')){
     Cache::clear(false);
 }
 
 Plugin::load('Asset', ['bootstrap' => true, 'routes' => true]);
-if($devmode){
-//    Plugin::load('DebugKit', ['bootstrap' => true]);
-}
 Plugin::load('System', ['bootstrap' => true, 'routes' => true]);
-//Plugin::load('AdminLte', ['bootstrap' => true, 'routes' => false]);
 Plugin::load('AdminTheme', ['bootstrap' => true, 'routes' => false]);
 Plugin::load('Migrations');
 
