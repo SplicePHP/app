@@ -14,9 +14,7 @@
         "splicephp/system": "dev-master",
         "splicephp/admin_theme": "dev-master",
         "splicephp/asset": "dev-master",
-        "splicephp/gizmo": "dev-master",
-        "studio-42/elfinder": "2.x",
-        "sabberworm/php-css-parser": "*"
+        "studio-42/elfinder": "2.x"
     },
     "minimum-stability": "dev",
     "repositories": [
