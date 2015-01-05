@@ -195,7 +195,6 @@ if(Configure::read('debug')){
 Plugin::load('Asset', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('System', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('AdminTheme', ['bootstrap' => true, 'routes' => false]);
-Plugin::load('Migrations');
 
 /**
  * Connect middleware/dispatcher filters.
