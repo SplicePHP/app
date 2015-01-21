@@ -13,7 +13,7 @@
     },
     "helpers": {
         "System.Form": {
-            "templates": "AdminTheme.forms-template.php",
+            "templates": "AdminTheme.forms-template",
             "widgets": {
                 "wysiwyg": [
                     "System\\View\\Widget\\Wysiwyg"
@@ -66,7 +66,8 @@
         "Time": null,
         "Paginator": null,
         "System.System": null,
-        "System.Acl": null
+        "System.Acl": null,
+        "System.Ui": null
     },
     "components": {
         "Flash": null,
@@ -77,16 +78,16 @@
         "System.System": null,
         "Auth": {
             "loginRedirect": {
+                "plugin": "System",
                 "controller": "dashboard",
                 "action": "index",
-                "plugin": "System",
                 "prefix": "admin"
             },
             "logoutRedirect": {
+                "plugin": "System",
                 "controller": "users",
                 "action": "login",
-                "prefix": "admin",
-                "plugin": "System"
+                "prefix": "admin"
             },
             "authError": "You are unothorized to perform this action.",
             "authorize": "Controller",

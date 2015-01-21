@@ -1,0 +1,10 @@
+{
+    "form": {
+        "paginator": {
+            "ajax": false,
+            "templates": {
+                "ajax": "AdminTheme.pagination-ajax.php"
+            }
+        }
+    }
+}
