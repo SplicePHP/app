@@ -69,6 +69,7 @@
             "App\\Console\\Installer::postInstall",
             "bin/cake System.automation update --install true"
         ],
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
         "post-update-cmd": [
         ]
     },
