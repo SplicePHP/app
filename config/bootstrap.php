@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,7 +13,6 @@
  * @since         0.10.8
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 /**
  * Configure paths required to find CakePHP + general filepath
  * constants
@@ -73,7 +73,6 @@ try {
 // You can use a file like app_local.php to provide local overrides to your
 // shared configuration.
 //Configure::load('app_local', 'default');
-
 // When debug = false the metadata cache should last
 // for a very very long time, as we don't want
 // to refresh the cache while users are doing requests.
@@ -104,9 +103,9 @@ ini_set('intl.default_locale', 'en_US');
  */
 $isCli = php_sapi_name() === 'cli';
 if ($isCli) {
-    (new ConsoleErrorHandler(Configure::read('Error')))->register();
+    (new ConsoleErrorHandler(Configure::consume('Error')))->register();
 } else {
-    (new ErrorHandler(Configure::read('Error')))->register();
+    (new ErrorHandler(Configure::consume('Error')))->register();
 }
 
 // Include the CLI bootstrap overrides.
@@ -169,7 +168,6 @@ Request::addDetector('tablet', function ($request) {
  * Inflector::rules('uninflected', ['dontinflectme']);
  * Inflector::rules('transliteration', ['/å/' => 'aa']);
  */
-
 /**
  * Plugins need to be loaded manually, you can either load them one by one or all of them in a single call
  * Uncomment one of the lines below, as you need. make sure you read the documentation on Plugin to use more
@@ -179,27 +177,25 @@ Request::addDetector('tablet', function ($request) {
  * Plugin::load('Migrations'); //Loads a single plugin named Migrations
  *
  */
-
 Plugin::load('Migrations');
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
 if (Configure::read('debug')) {
-    Plugin::load('DebugKit', ['bootstrap' => true]);
+//    Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
-if(Configure::read('debug')){
-    Cache::clear(false);
+if (Configure::read('debug')) {
+//    Cache::clear(false);
 }
 
 Plugin::load('Asset', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('System', ['bootstrap' => true, 'routes' => true]);
-Plugin::load('AdminTheme', ['bootstrap' => true, 'routes' => false]);
+Plugin::load('AdminTheme', ['bootstrap' => true, 'routes' => true]);
 
 /**
  * Connect middleware/dispatcher filters.
  */
-
 DispatcherFactory::add('Asset.Asset');
 //DispatcherFactory::add('Asset');
 DispatcherFactory::add('Routing');
