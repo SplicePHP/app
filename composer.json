@@ -9,15 +9,21 @@
         "cakephp/cakephp": "3.0.*-dev",
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "dev-master",
+        "cakephp/plugin-installer": "*",
         "phpunit/phpunit": "*",
         "splicephp/splice": "dev-master",
         "splicephp/system": "dev-master",
         "splicephp/admin_theme": "dev-master",
         "splicephp/asset": "dev-master",
-        "studio-42/elfinder": "2.x"
+        "splicephp/elfinder": "dev-master"
     },
     "minimum-stability": "dev",
     "repositories": [
+        {
+            "name": "splicephp/elfinder",
+            "type": "vcs",
+            "url": "git@bitbucket.org:SplicePHP/elfinder.git"
+        },
         {
             "name": "splicephp/splice",
             "type": "vcs",
