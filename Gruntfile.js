@@ -89,12 +89,16 @@ module.exports = function (grunt) {
         'hub:watch',
         'watch'
     ]);
-
-    grunt.registerTask('update', [
+    
+    grunt.registerTask('evolve', [
         'shell:update-all'
     ]);
     
     grunt.registerTask('symlinks', [
         'shell:update-symlinks'
+    ]);
+    
+    grunt.registerTask('compile', [
+        'shell:compile'
     ]);
 };
