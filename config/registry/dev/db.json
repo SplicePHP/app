@@ -1,5 +1,51 @@
 {
-	"table": {
-		
-	}
+    "table": {
+        "users": {
+            "plugin": "System",
+            "belongsTo": [
+                {
+                    "alias": "Unconventional",
+                    "fk": "users_id",
+                    "table": "unconventional"
+                }
+            ],
+            "belongsToMany": [
+                {
+                    "table": "roles",
+                    "more": "config"
+                }
+            ],
+            "lock": "c,e"
+        },
+        "roles": {
+            "plugin": "System"
+        },
+        "system_menus": {
+            "plugin": "System"
+        },
+        "user_profiles": {
+            "plugin": "System"
+        },
+        "outcomes": {
+            "displayField": "title"
+        },
+        "outputs": {
+            "displayField": "title"
+        },
+        "indicators": {
+            "displayField": "indicator"
+        },
+        "impacts": {
+            "displayField": "impact_statement"
+        },
+        "partners": {
+            "displayField": "partner"
+        },
+        "risks": {
+            "displayField": "risks_and_constraints"
+        },
+        "objectives": {
+            "displayField": "objective"
+        }
+    }
 }

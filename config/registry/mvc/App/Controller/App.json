@@ -1,4 +1,9 @@
 {
+    "show": {
+        "content": {
+            "header": true
+        }
+    },
     "theme": "AdminTheme",
     "form": {
         "paginator": {
@@ -54,9 +59,6 @@
                 "tree": [
                     "System\\View\\Widget\\Tree"
                 ],
-                "checkbox": [
-                    "System\\View\\Widget\\Checkbox"
-                ],
                 "hasMany": [
                     "System\\View\\Widget\\HasMany"
                 ]
@@ -104,7 +106,7 @@
         "jquery": {
             "path": "lib\/jquery\/jquery.min",
             "shim": {
-                "exports": ["$","jQuery"]
+                "exports": ["$", "jQuery"]
             }
         },
         "jquery-validation": {
@@ -130,6 +132,11 @@
                     "jquery"
                 ]
             }
+        }
+    },
+    "index": {
+        "pagination": {
+            "ajax": 1
         }
     }
 }

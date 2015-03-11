@@ -1,0 +1,1 @@
+{"config":{"ItemParents":{"config":{"display":"edit"}},"field":{"description":{"options":{"type":"wysiwyg","container":false}},"image":{"options":{"type":"img","scope":"global"}},"categories":{"options":{}}}},"contain":["ItemParents","ItemParents.Options","ItemChildren","Categories"]}

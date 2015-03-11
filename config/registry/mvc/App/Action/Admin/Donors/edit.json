@@ -1,0 +1,32 @@
+{
+    "contain": [
+        "DonorContracts",
+        "DonorContracts.ContractTypes",
+        "ContactInformations",
+        "DonorContracts.Attachments"
+    ],
+    "config": {
+        "DonorContracts": {
+            "config": {
+                "display": "edit"
+            },
+            "Attachments": {
+                "config": {
+                    "display": "select_"
+                }
+            }
+        },
+        "ContactInformations": {
+            "config": {
+                "display": "select+"
+            }
+        },
+        "field": {
+            "contact_informations": {
+                "options": {
+                    "type": "tree"
+                }
+            }
+        }
+    }
+}
